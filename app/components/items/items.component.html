@@ -1,0 +1,12 @@
+<div class="box">
+    <div class="progress-container">
+        <meter min="0" [max]="total" [value]="counter" low=".1" high=".75" optimum=".3"></meter>
+        <!-- <progress id="file" [value]="calcTodos*4" [max]="total"></progress> -->
+    </div>
+    <app-add-item (addTodoEvent)="createTodo($event)"></app-add-item>
+    <!--  -->
+    <ng-container *ngFor="let todo of todos; let index = index">
+        <app-item [todoItem]="todo" (toggleEvent)="toggleTodo($event)" (updateEvent)="updateTodo($event)" (deleteEvent)="deleteTodo($event)">
+        </app-item>
+    </ng-container>
+</div>

@@ -1,0 +1,10 @@
+<div class="row">
+    <form (ngSubmit)="addTodo()" class="d-flex">
+        <input class="form-control" [(ngModel)]="text" name="title" placeholder="add new task here ..">
+        <!-- <p *ngIf="title.length > 0">the task {{title}} will be added.</p> -->
+        <Button class="btn btn-primary" type="submit">
+            <i class="fa-solid fa-plus"></i>
+            New ToDo
+        </Button>
+    </form>
+</div>

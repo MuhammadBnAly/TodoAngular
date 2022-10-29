@@ -1,0 +1,17 @@
+<div class="todo-item" [ngClass]="{'todo-completed' : todoItem.completed}">
+    <div class="row">
+        <div class="col-10 container  d-flex justify-content-start">
+            <label class="container">
+                <input type="checkbox" [checked]="todoItem.completed" (change)="toggle(todoItem)">
+                <span class="checkmark"></span>
+                <p>{{todoItem.id}} : {{todoItem.title}}</p>
+            </label>
+        </div>
+        <div class="col-2 d-flex justify-content-end">
+            <button class="btn btn-danger btn-sm" (click)="delete(todoItem)">
+                <i class="fa-solid fa-trash-can"></i>                   
+                Delete
+                </button>
+        </div>
+    </div>
+</div>
